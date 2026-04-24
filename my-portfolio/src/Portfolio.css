@@ -1229,21 +1229,22 @@ body::-webkit-scrollbar {
     .hero {
         /* This is the magic fix */
         align-items: flex-start !important; 
-        padding-top: 120px !important; 
-        padding-bottom: 60px !important;
+        padding-top: 100px !important; 
+        padding-bottom: 40px !important;
         height: auto !important;
         overflow: visible !important;
     }
 
     .hero-title {
-        font-size: 2.2rem;
-        line-height: 1.1;
+        margin-top: 10px;
+        font-size: 2rem;
     }
 
     .hero-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .hero-buttons {
@@ -1251,9 +1252,16 @@ body::-webkit-scrollbar {
         flex-wrap: wrap;
     }
 
+    .hero-text {
+        order: 1;
+        text-align: center;
+    }
+
     .image-container {
-        width: 250px;
-        height: 250px;
+        order: -1;
+        width: 220px;
+        height: 220px;
+        margin-bottom: 0.5rem;
     }
 
     .about-stats {
