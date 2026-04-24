@@ -65,7 +65,7 @@ const Portfolio = () => {
   const contactRef = useRef(null);
 
   // Sample project data with multiple images
-  const projects = [
+  const projects = React.useMemo(() => [
     {
       id: 1,
       title: "Smart Cafeteria System",
@@ -261,7 +261,7 @@ const Portfolio = () => {
       githubLink: "https://github.com/MuhammadAnas126/codealpha_tasks/tree/hotel-reservation-system"
     },
     
-  ];
+  ], []);
 
   const skills = [
     { name: "Java (Mastered OOP)", level: 95 },
@@ -812,7 +812,7 @@ const Portfolio = () => {
                 >
                   <img
                     src={selectedProject.images[currentImageIndex]}
-                    alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
+                    alt={`${selectedProject.title}`}
                   />
                 </a>
               </div>
