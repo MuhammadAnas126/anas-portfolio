@@ -1,9 +1,8 @@
 {
-  "builds": [
+  "rewrites": [
     {
-      "src": "my-portfolio/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "my-portfolio/build" }
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
