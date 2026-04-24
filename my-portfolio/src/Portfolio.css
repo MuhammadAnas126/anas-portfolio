@@ -1225,6 +1225,18 @@ body::-webkit-scrollbar {
     .nav-toggle {
         display: block;
     }
+    
+    .hero {
+        /* This is the magic fix */
+        align-items: flex-start !important; 
+        padding-top: 120px !important; 
+        height: auto !important;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
 
     .hero-content {
         grid-template-columns: 1fr;
