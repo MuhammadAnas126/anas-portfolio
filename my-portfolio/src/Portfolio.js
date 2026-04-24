@@ -400,18 +400,6 @@ const Portfolio = () => {
     });
   };
 
-  // Download resume function
-  const downloadResume = () => {
-    // Replace with your actual resume URL
-    const resumeUrl = 'https://rxresu.me/anasashfaq3456/muhammad-anas-software-engineer';
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Muhammad_Anas_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   // Scroll effect for navbar and animations
   useEffect(() => {
     const handleScroll = () => {
@@ -517,10 +505,16 @@ const Portfolio = () => {
                 <button className="btn btn-primary" onClick={() => scrollToSection('projects')}>
                   View My Work
                 </button>
-                <button className="btn btn-outline" onClick={downloadResume}>
+                <a 
+                  href="/Muhammad_Anas_Resume.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-outline"
+                  style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}
+                >
                   <Download size={20} />
-                  Download Resume
-                </button>
+                  View Resume
+                </a>
               </div>
               <div className="social-links">
                 <a href="https://github.com/MuhammadAnas126" target="_blank" rel="noopener noreferrer">
