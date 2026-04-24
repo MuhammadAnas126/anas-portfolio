@@ -1,6 +1,0 @@
-{
-  "outputDirectory": "my-portfolio/build",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
